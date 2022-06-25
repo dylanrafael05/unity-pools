@@ -105,8 +105,7 @@ namespace UnityPool
         {
             foreach(var b : behaviours)
             {
-                b.GameObject.SetActive(false);
-                b.PoolActive = false;
+                GameObject.Destroy(b.GameObject);
             }
             
             behaviours.Clear();
