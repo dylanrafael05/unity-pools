@@ -103,7 +103,7 @@ namespace UnityPool
 
         public void ReleaseAll()
         {
-            foreach(var b : behaviours)
+            foreach(var b in behaviours)
             {
                 GameObject.Destroy(b.GameObject);
             }
