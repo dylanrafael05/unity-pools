@@ -103,6 +103,12 @@ namespace UnityPool
 
         public void ReleaseAll()
         {
+            foreach(var b : behaviours)
+            {
+                b.GameObject.SetActive(false);
+                b.PoolActive = false;
+            }
+            
             behaviours.Clear();
             freeIndices.Clear();
             releaseBuffer.Clear();
